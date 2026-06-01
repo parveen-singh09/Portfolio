@@ -86,10 +86,10 @@ export const Contact = ({ isDarkMode, setIsDarkMode }) => {
           <Image alt='' src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_white} className='w-4' />
         </motion.button>
 
-        if(result === Success!){
+        if(result === "Success!"){
           <p className='mt-4 text-green-500'>{result}</p>
         }
-        if(result === Error) {
+        else  {
           <p className='mt-4 text-red-500'>{result}</p>
         }
       </motion.form>
