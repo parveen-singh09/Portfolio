@@ -89,8 +89,8 @@ export const Contact = ({ isDarkMode, setIsDarkMode }) => {
         if(result === Success!){
           <p className='mt-4 text-green-500'>{result}</p>
         }
-        else {
-          <p className='mt-4 text-redd-500'>{result}</p>
+        if(result === Error) {
+          <p className='mt-4 text-red-500'>{result}</p>
         }
       </motion.form>
     </motion.div>
