@@ -46,17 +46,27 @@ export const Work = ({ isDarkMode, setIsDarkMode }) => {
 
             <div className='grid grid-cols-auto my-10 gap-5'>
                 {workData.map((project, index) => (
-                    <motion.div
+                    <motion.a
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.15 }}
                         whileHover={{ scale: 1.03 }}
                         viewport={{ once: false }}
-                        className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
+                        className='aspect-square rounded-2xl relative cursor-pointer group block overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-500'
                         key={index}
-                        style={{ backgroundImage: `url("${project.bgImage}")` }}
+                        href={project.url || '#'}
+                        target={project.url ? '_blank' : undefined}
+                        rel={project.url ? 'noopener noreferrer' : undefined}
                     >
-                        <div className='group-hover:bottom-7 bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500'>
+                        <Image
+                            src={project.bgImage}
+                            alt={project.title}
+                            fill
+                            sizes='(max-width: 768px) 100vw, 33vw'
+                            className='object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+                        <div className='group-hover:bottom-7 bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 shadow-[0_4px_12px_rgba(0,0,0,0.15)]'>
                             <div>
                                 <h2 className='dark:text-black font-semibold'>{project.title}</h2>
                                 <p className='text-sm text-gray-700'>{project.description}</p>
@@ -65,7 +75,7 @@ export const Work = ({ isDarkMode, setIsDarkMode }) => {
                                 <Image className='w-5' src={assets.send_icon} alt='send icon' />
                             </div>
                         </div>
-                    </motion.div>
+                    </motion.a>
                 ))}
             </div>
 

@@ -41,7 +41,7 @@ export const Services = () => {
                 viewport={{ once: false }}
                 className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'
             >
-                I am a Full Stack Developer Worked With Several Projects Before
+                A full-stack developer delivering polished, production-ready web experiences.
             </motion.p>
 
             <div className='grid grid-cols-auto gap-6 my-10'>

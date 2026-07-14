@@ -53,7 +53,7 @@ export const About = ({ isDarkMode, setIsDarkMode }) => {
           className='flex-1'
         >
           <p className='mb-10 max-w-2xl font-Ovo'>
-            Im a experienced full stack developer  trust me and f fjfjfjdsfkfkdkf
+            I&apos;m an experienced full-stack developer who enjoys turning ideas into clean, reliable web applications. I focus on writing maintainable code and building interfaces that feel effortless to use.
           </p>
 
           {/* Cards List with staggered animations */}
