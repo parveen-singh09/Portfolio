@@ -29,7 +29,7 @@ export const Work = ({ isDarkMode, setIsDarkMode }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: false }}
-                className='text-center text-5xl font-Ovo'
+                className='text-center text-5xl font-Ovo' 
             >
                 My Latest Work
             </motion.h2>
