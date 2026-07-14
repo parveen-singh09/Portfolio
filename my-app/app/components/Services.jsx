@@ -50,7 +50,7 @@ export const Services = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.15 }}
-                        whileHover={{ scale: 1.03, y: -5 }}
+                        whileHover={{ scale: 1.02, y: -3, transition: { duration: 0.2 } }}
                         viewport={{ once: false }}
                         className='dark:hover:shadow-white dark:hover:bg-b/50 hover:bg-a px-8 py-12 duration-300 hover:shadow-black cursor-pointer border-[0.5px] border-gray-400 rounded-xl'
                         key={index}
