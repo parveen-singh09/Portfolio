@@ -17,7 +17,7 @@ export const Navbar = ({isDarkMode, setIsDarkMode}) => {
                 <Image src={assets.header_bg_color} alt="" className='w-full' />
             </div>
             <nav className="dark:bg-c dark:border-b-1 w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 backdrop-blur-lg">
-                <a href="#top">
+                <a href="#top" className='flex-1'>
                     <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt="" className='w-28 cursor-pointer mr-14' />
                 </a>
 
@@ -29,7 +29,7 @@ export const Navbar = ({isDarkMode, setIsDarkMode}) => {
                     <li><a className='font-Ovo' href="#contact">Contact Me</a></li>
                 </ul>
 
-                <div className='flex items-center gap-4'>
+                <div className='flex flex-1 justify-end items-center gap-4'>
                     <button onClick={() => setIsDarkMode(prev => !prev)} ><Image className="w-6" src={isDarkMode ? (assets.sun_icon) : (assets.moon_icon)} alt="logo" /></button>
                     <a className='font-Ovo hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4' href="#contact">Contact<Image src={isDarkMode ? assets.arrow_icon : assets.arrow_icon_dark} alt="" className='w-3' /></a>
                     <button onClick={openmenu} className='block md:hidden ml-3'><Image className="w-6" src={isDarkMode ? assets.menu_white : assets.menu_black} alt="" /></button>
